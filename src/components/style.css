@@ -1,0 +1,410 @@
+
+
+
+.Home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+.burger{
+    width: 40px;
+    /* height: 20%; */
+    /* border-radius: 20px; */
+    /* background-color: wheat; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    display: none;
+}
+
+
+
+/* 
+button{
+    width: 20%;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+} */
+li:hover, button:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+.logo{
+    height: 100%;
+    /* width: 100px; */
+}
+
+.home{
+    width: 95vw;
+    height: 80vh;
+    border-radius: 10px;
+}
+
+.pic{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* border-radius: 20px; */
+}
+.card{
+    width: 100vw;
+    height: max-content;
+    background-color: white;
+    display: flex;
+    /* background: #000; */
+    align-items: center;
+    flex-direction:column;
+    justify-content: center;
+}
+.cardholder{
+    width: 90%;
+    height: auto;
+    background-color:aliceblue;
+    display: flex;
+    /* grid-template-columns: repeat(3,1fr); */
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.maincard{
+    width: 20rem;
+    height:22rem ;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  
+}
+
+.image{
+    width: 100%;
+    height: 80%;
+    border-radius: 10px, 10px, 0, 0;
+    /* padding: 20px; */
+}
+
+.addtext{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 900;
+    padding-bottom: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: lightblue;
+}
+
+.view{
+    width: 100%;
+    height: 100%;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.viewdetails{
+   width: 30%;
+   height: 70%;
+   background: #000;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: #fff;
+   padding: 5px;
+   border-radius: 10px;
+   cursor: pointer;
+}
+.viewdetails:hover{
+    transform: scale(1.03);
+}
+.Cart{
+    width: 100vw;
+    height: max-content;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.carthold{
+    width: 70vw;
+    height: 55vh;
+    background-color: aliceblue;
+    box-shadow: 5px 5px 5px lightgray;
+    padding: 20px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cartbox{
+    width: 100%;
+    height: 30%;
+    background-color: white;
+    box-shadow: 5px 5px 5px lightgray;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    /* justify-content: center; */
+}
+.Cartimg{
+    width: 40%;
+    height: 100%;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.Carttext{
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    
+}
+
+.buttons{
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-between;
+}
+span{
+    font-size: 20px;
+}
+
+.delete{
+    width: 90px;
+    height: 50%;
+    background-color: rgb(168, 18, 18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.delete:hover, .add:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: ease-in-out;
+    color: red;
+}
+
+.btn{
+    width: 30%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.add{
+    width: 40%;
+    height: 50%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    
+}
+.carttxt{
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.Details{
+    width: 100vw;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.itemholder{
+    width: 100%;
+    height: 76vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    /* justify-content: center; */
+    gap: 10px;
+}
+
+.item{
+    width: 30%;
+    height: 50%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 3px 5px 5px lightgray;
+}
+.detailholder{
+    width: 70vw;
+    height: 50%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* gap: 20px; */
+}
+ Link{
+    list-style: none;
+    text-decoration: none;
+}
+
+.itemtext{
+    width: 100%;
+    height: 80%;
+    background-color: #fff;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    background-color: lightgray;
+   border-radius: 3px;
+   box-shadow: 3px 3px 3px rgb(252, 251, 249);
+}
+
+
+/* .itemdetail{
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+} */
+
+
+
+
+
+
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.cardHolder{
+    width: 20rem;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.cardHolder img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cardButton{
+    width: 95%;
+    height: 10%;
+    border-radius: 20px;
+    background-color: #025949;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    text-decoration: none;
+}
+
+.quantity{
+    width: 70vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: aliceblue;
+}
+
+.CardButton:hover{
+    background-color: #027a64;
+    transition: all 350ms;
+    border: 2px solid #025949;
+}
+.cardContainer{
+    margin-top: 20px;
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+
+}
+@media (max-width:768px) {
+   
+    ul{
+        display:none;
+    }
+    .burger{
+        display: flex;
+    }
+
+    .cardholder{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width:400px) {
+  
+    
+
+    .cardholder{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+
+

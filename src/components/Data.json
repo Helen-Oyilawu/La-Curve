@@ -1,0 +1,103 @@
+[
+    
+    {
+        "id": 1,
+        "price":300,
+    "category": "mama rukayat fries",
+    "name": "fried cakes",
+    "image": "https://img.freepik.com/free-photo/croissant-with-chocolate_144627-9001.jpg?t=st=1723477532~exp=1723481132~hmac=d2da88010c861a99ecc53201f31c70e259dccb81c4ac2cbdaf008f091455ad9c&w=740"
+    },
+
+    {
+        "id": 2,
+        "price":300,
+    "category": "mama rukayat fries",
+    "name": "fish rolls",
+    "image": "https://img.freepik.com/free-photo/fresh-danish-bread-with-milk-fruit-blueberry-cherry-sauce-served-with-milk_1150-23549.jpg?ga=GA1.1.2118937572.1723474342&semt=ais_hybrid"
+    },
+    
+
+    {
+        "id": 3,
+        "price":300,
+    "category": "mama rukayat fries",
+    "name": "Donuts",
+    "image": "https://img.freepik.com/premium-photo/bunch-pastries-including-one-that-has-nuts-nuts-it_1049143-30112.jpg?ga=GA1.1.2118937572.1723474342&semt=ais_hybrid"
+    },
+
+    {
+    "id": 4,
+    "price":300,
+    "category": "mama rukayat fries",
+    "name": "Cake ",
+    "image": "https://img.freepik.com/free-photo/assortment-pieces-cake_114579-30699.jpg?ga=GA1.1.2118937572.1723474342&semt=ais_hybrid"
+    },
+
+    {
+        "id": 5,
+        "price":300,
+        "category": "mama Jerry's Rice Store",
+        "name": "Jollof ",
+        "image": "https://img.freepik.com/free-photo/side-view-pilaf-with-stewed-beef-meat-plate_141793-5057.jpg?ga=GA1.1.2118937572.1723474342&semt=ais_hybrid"
+    },
+
+    {
+        "id": 6,
+        "price":300,
+        "category": "mama Jerry's Rice Store",
+        "name": "CocoaNut Rice",
+        "image": "https://img.freepik.com/free-photo/fried-rice-with-sausage_1339-8075.jpg?ga=GA1.1.2118937572.1723474342&semt=ais_hybrid"
+    },
+
+
+    {
+        "id": 7,
+        "price":300,
+        "category": "mama Jerry's Rice Store",
+        "name": "CocoaNut Rice",
+        "image": "https://img.freepik.com/premium-photo/close-up-rice-with-red-green-sprig-pepper_1209326-297298.jpg?ga=GA1.1.2118937572.1723474342&semt=ais_hybrid"
+    },
+
+    {
+        "id": 8,
+        "price":300,
+        "category": "mama Jerry's Rice Store",
+        "name": "white rice",
+        "image": "https://img.freepik.com/premium-photo/short-grain-rice-panicle-kernel_1029622-113126.jpg?ga=GA1.1.2118937572.1723474342&semt=ais_hybrid"
+    },
+
+
+    {
+        "id": 9,
+        "price":300,
+        "category": "Funke's Soft drinks",
+        "name": "sprite",
+        "image": "https://img.freepik.com/free-photo/front-view-green-black-lemonade-bottles_140725-99719.jpg?ga=GA1.1.2118937572.1723474342&semt=ais_hybrid"
+    },
+    {
+        "id": 10,
+        "price":300,
+        "category": "Funke's Soft drinks",
+        "name": "pepsi",
+        "image": "https://img.freepik.com/premium-photo/pepsi-with-white-background-high-quality-ultra-hd_670382-89286.jpg?ga=GA1.1.2118937572.1723474342&semt=ais_hybrid"
+    },
+
+    {
+        "id": 11,
+        "price":300,
+        "category": "Funke's Soft drinks",
+        "name": "Lemon Juice",
+        "image": "https://img.freepik.com/free-photo/glasses-lemonade-with-mint_23-2148371263.jpg?ga=GA1.1.2118937572.1723474342&semt=ais_hybrid"
+    },
+
+    {
+        "id": 12,
+        "price":300,
+        "category": "Funke's Soft drinks",
+        "name": "Fanta soda",
+        "image": "https://img.freepik.com/free-vector/realistic-pear-soda-advertisement_52683-8101.jpg?ga=GA1.1.2118937572.1723474342&semt=ais_hybrid"
+    }
+
+
+    
+]

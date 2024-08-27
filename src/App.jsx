@@ -10,7 +10,8 @@ import Login from './components/Login'
 import {createBrowserRouter,HashRouter,Route,RouterProvider, Routes,} from "react-router-dom";
 import SignUp from './components/SIgnUp'
 import Menu from './components/Menu'
-import Paymentpop from './components/Paymentpop'
+import PrivateRoutes from "./components/PrivateRoutes"
+import  "./App.css"
 
 // import Layouts from './components/Layouts'
 
@@ -26,11 +27,8 @@ function App() {
     
 
   return (
-    <div>
-        
+       
           <Routes>
-          
-          
              <Route path='/' element={<Login/>}/>
              <Route path='/signup' element={<SignUp/>}/>
              <Route path='/home' element={<Home/>}/>
@@ -38,12 +36,8 @@ function App() {
              <Route path='/menue/:catName' element={<Menu/>}/>
              <Route path='/details/:id' element={<Details/>}/>
               <Route path='/cart' element={<Cart />}/>
-              {/* <Route path='//:x' element={<Paymentpop />}/> */}
-             
-             
           </Routes>
         
-    </div>
 
     
   )

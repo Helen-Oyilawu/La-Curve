@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Header from './Header'
 import './Login.css'
-import { useNavigate } from 'react-router-dom'
+import { Navigate, useNavigate } from 'react-router-dom'
 // import { toast, ToastContainer } from 'react-toast'
 import { toast, Toaster } from 'react-hot-toast'
 import { useSelector, useDispatch} from 'react-redux'
@@ -14,8 +14,12 @@ const Login = () => {
     const nav = useNavigate()
     const [formData, setFormData] = useState({})
 
-    const isLoggedin = useSelector((state)=>state.Cart.isLoggedIn)
-    console.log('isLoggedin',isLoggedin)
+    // const isLoggedin = useSelector((state)=>state.Cart.isLoggedIn)
+    // console.log('isLoggedin',isLoggedin)
+    console.log(email);
+    console.log(password);
+    console.log(formData)
+
 
     useEffect(()=>{
       setFormData({
@@ -27,16 +31,20 @@ const Login = () => {
     
     const handleLogin =(e)=>{
       e.preventDefault()
-        if (!formData) {
-          toast.error('enter details')
+      console.log(formData);
+      
+        if (!email || !password ) {
+        toast.error('enter details')
         } else {
           dispatch(login(formData))
           console.log(formData)
-          nav('/Home')
+          nav('/home')
+          
         }
       }
 
       
+
 
       
    
@@ -46,12 +54,8 @@ const Login = () => {
         
         <form className="loginbox" onSubmit={handleLogin}>
             <h2>Login</h2>
-            <input type="email"  placeholder='email' onChange={(e)=>setFormData((p)=>{
-              return {...p, email: e.target.value}
-            })}/>
-            <input type="password"  placeholder='passwword' onChange={(e)=> setFormData((p)=>{
-              return{...p, password: e.target.value}
-            })}/>
+            <input type="email"  placeholder='email' onChange={(e)=>setEmail(e.target.value)}/>
+            <input type="password"  placeholder='password' onChange={(e)=> setPassword(e.target.value)}/>
             <button className='LoginBtn' type='submit'>Login</button>
             <p>Don't have an account? <span onClick={()=>nav('/signup')}>SignUp</span></p>
         </form>

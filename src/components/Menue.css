@@ -14,17 +14,16 @@
     /* padding: 10px; */
     height: 86%;
     /* background-color: red; */
-    display: flex;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     align-items: center;
     justify-content: center;
 }
-
 .MenuBox{
-    width: 50%;
-    height: 70%;
-    box-shadow: 3px 3px 3px grey;
+    width: 100%;
+    height: 200px;
+    /* box-shadow: 3px 3px 3px grey; */
 
 
 
@@ -44,4 +43,13 @@
         text-align: center;
     }
     
+}
+
+@media (max-width:320px) {
+    .Menue{
+        height: max-content;
+    }
+    .menu{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

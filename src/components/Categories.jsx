@@ -36,12 +36,12 @@ const Categories = () => {
             <img src={img} alt="" />
             <div className="text">
               <Link to={`/menue/${e}`}>
-                <h2
+                <h3
                   // onClick={() => nav(`/Menue/${e}`)} 
                   style={{ color: 'goldenrod', cursor: 'pointer', textDecoration: 'underline' }}
                 >
                   {e.toUpperCase()}
-                </h2>
+                </h3>
               </Link>
             </div>
           </div>

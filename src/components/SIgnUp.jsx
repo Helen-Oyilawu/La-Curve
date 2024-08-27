@@ -11,81 +11,78 @@ import { zodResolver } from '@hookform/resolvers/zod'
 
 const SignUp = () => {
     const nav = useNavigate()
-    // const [Username, setUserName] = useState('')
-    // const [email, setEmail] = useState('')
-    // const [password, setPassword] = useState('') 
-    // const [formData, setFormData] = useState({})
+    const [Username, setUserName] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('') 
+    const [formData, setFormData] = useState({})
+    const [role, setRole] = useState('')
 
     const dispatch = useDispatch()
-    const log = useSelector((state)=> state.Cart.cart.isLoggedIn)
-    const users = useSelector((state)=> state.Cart.cart.users)
-    const current = useSelector((state)=> state.Cart.cart.loggedInUser)
+    // const log = useSelector((state)=> state.Cart.cart.isLoggedIn)
+    // const users = useSelector((state)=> state.Cart.cart.users)
+    // const current = useSelector((state)=> state.Cart.cart.loggedInUser)
     // console.log(log);
     // console.log(users);
     // console.log(current);
+    console.log(role)
+
+  // const [usersRole,setUsersRole]=useState("");
+  // console.log(usersRole)
+
+  //   const User = z.object({
+  //     name:z.string(),
+  //     email:z.string().email({message: "must be a valid email"}),
+  //     role:z.string(),
+  //     password:z.string({message:"must be a string"}).min(5, {message: "must be more than 5 characters"})
+  //   })
+  //   const  {register, handleSubmit, formState: {errors}, setError} = useForm({
+  //     resolver: zodResolver(User)
+  //   }) 
+  //   console.log(register)
+  //   const onSubmit = (data) => {
+  //     dispatch(signUp(data));
+  //     console.log(data)
+  //   }
 
 
 
-    const User = z.object({
-      name:z.string(),
-      email:z.string().email({message: "must be a valid email"}),
-      role:z.string(),
-      password:z.string({message:"must be a string"}).min(5, {message: "must be more than 5 characters"})
-    })
+    useEffect(()=>{
+        setFormData({
+          password,
+          Username,
+          email,
+          role
 
-    const  {register, handleSubmit, formState: {errors}, setError} = useForm({
-      resolver: zodResolver(User)
-    }) 
-    const onSubmit = (data) => {
-      dispatch(signUp(data));
-      console.log(data)
-    
-     
-    }
-
-
-
-    // useEffect(()=>{
-    //     setFormData({
-    //       password,
-    //       Username,
-    //       email
-    //     })
-    //   },[email,name,password])
+        })
+      },[email,Username,password, role])
       
-      // const signUpForm = (e)=>{
-      //   console.log(formData)
-      //   //  setLoading(true)
-      //    if (!name || !email || !password) {
+      const signUpForm = (e)=>{
+        e.preventDefault
+        console.log(formData)
+        //  setLoading(true)
+         if (!Username || !email || !password)  {
         
-      //     toast.error('Details is required')
-      //    } else {
-      //     dispatch(signUp(formData))
-      //     nav('/')
-      //    }
-      // }
+          toast.error('Details is required')
+         } else {
+          dispatch(signUp(formData))
+          nav('/')
+         }
+      }
    
   return (
     <div className='Login'>
         <div className="loginbox"  >
             <h2>SignUp</h2>
-            <input type="text"  placeholder='UserName' required={true} {...register("name")}/>
-            <input type="email"  placeholder='email'  required={true}  {...register("email")}/>
-              {
-                errors.message && <p>{errors.email.message}</p>
-              }
-
-            <select name='' id='inputBoxes' {...register("role")}>
-               <option value="">--vendor/buyer--</option>
+            <input type="text"  placeholder='UserName' onChange={(e)=> setUserName(e.target.value)}/>
+            <input type="text"  placeholder='Email' onChange={(e)=> setEmail(e.target.value)}/>
+            <select name='' id='inputBoxes' onChange={(e)=> setRole(e.target.value)}>
+               <option value="">--vendor/buyer--</option  >
                <option value="vendors">vendor</option>
-               <option value="buyers">buyer</option>
+               <option value="buyer">buyer</option>
             </select>
 
-            <input type="password"  placeholder='passwword'  required={true}  {...register ('password')}/>
-              {
-                errors.password && <p>{errors.password.message}</p>
-              }
-            <button  onClick={handleSubmit(onSubmit)}>sign up</button>
+            <input type="password"  placeholder='password' onChange={(e)=>setPassword(e.target.value)}/>
+            <button  onClick={signUpForm}>sign up</button>
             <p>Already have an Account? <span onClick={()=>nav('/')}>Login</span></p>
         </div>
         <Toaster/>

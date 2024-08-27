@@ -1,18 +1,24 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { toast } from 'react-hot-toast'
+import { useNavigate } from 'react-router-dom'
 // import { parsePath } from 'react-router-dom'   
 
 const initialState = {
-  // value: [],
+ 
   cart: [],
   total: 0,
   QTY: 0,
-  users: [] ,
+  users:{
+    buyers:[],
+    vendors:[]
+  },
   isLoggedIn: false,
-  loggedInUser: {}
+  loggedInUser: {},
+  usersRole:""
 }
 
 export const featuresSlice = createSlice({
+  
   name: 'Cart',
   initialState,
   reducers: {
@@ -79,26 +85,37 @@ export const featuresSlice = createSlice({
 
 
     signUp: (state, { payload }) => {
-      state.users.push(payload)
+      if(payload.role === "buyer"){
+        state.users.buyers.push(payload)
+      }else{
+        state.users.vendors.push(payload)
+      }
     },
 
     login: (state, { payload }) => {
-      const check = state.users.findIndex((e) => e.email === payload.email);
+      
+      const check = state.users.buyers.findIndex((e) => e.email === payload.email);
       if (check !== -1) {
-        if (state.users[check].password !== payload.password) {
+        if (state.users.buyers[check].password !== payload.password) {
           toast.error('password Is Incorrect')
         } else {
           state.isLoggedIn = true
-          state.loggedInUser = payload
+          state.loggedInUser =  payload
           console.log(check)
+          toast.success('Logged in successful')
+         
         }
       } else {
         toast.error('user is not found')
       }
+    },
+    logout:(state,{payload})=>{
+      state.isLoggedIn =false;
+      state.loggedInUser={}
     }
   },
 })
 
-export const { addToCart, decrementQTY, deleteCart, incrementQty, signUp, login , clearCart} = featuresSlice.actions
+export const { addToCart, decrementQTY, deleteCart, incrementQty, signUp, login , clearCart,logout} = featuresSlice.actions
 
 export default featuresSlice.reducer

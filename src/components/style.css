@@ -27,17 +27,7 @@ body{
 
 
 
-/* 
-button{
-    width: 20%;
-    background-color: black;
-    padding: 20px;
-    border-radius: 10px;
-    color: white;
-    font-size: 15px;
-    font-weight: 600;
-    text-transform: uppercase;
-} */
+
 li:hover, button:hover{
     transform: scale(1.05);
     cursor: pointer;
@@ -384,7 +374,9 @@ h1{
 
 }
 @media (max-width:768px) {
-   
+   .Logout{
+    display: none;
+   }
     ul{
         display:none;
     }
